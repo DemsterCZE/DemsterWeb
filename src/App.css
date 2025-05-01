@@ -10,6 +10,7 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
+
 #content {
   width: 80%;
 }
@@ -19,7 +20,6 @@ body {
 .jost {
   font-family: "Jost", sans-serif;
   font-optical-sizing: auto;
-  font-weight: weight;
   font-style: normal;
 }
 

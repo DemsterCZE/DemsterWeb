@@ -6,9 +6,13 @@ const config: Config = {
     './src/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        jost: ['"Jost"', 'sans-serif'],
+        rubikmono: ['"Rubik Mono One"', 'sans-serif'],
+      },
+    },
   },
-  plugins: [require('daisyui')],
 };
 
 export default config;
