@@ -20,13 +20,14 @@ import vscodesvg from "/images/vscode.svg"
 import intelijsvg from "/images/intelij.svg"
 import pycharmsvg from "/images/pycharm.svg"
 
+
 function App() {
   return(
     <>
       <div id='content' className='ml-auto mr-auto '>
           <TypeWriter title='DemsterSpace'/>
           <div className='lg:flex gap-10 items-start'>
-              <img src="src/assets/portrai.jpg" alt="portrait" className='w-85 rounded-xl'/>
+              <img src="src/assets/portrait.jpg" alt="portrait" className='w-85 rounded-xl'/>
               <SectionCard title={"Petr Zemánek"} text={"Mladý vývojář s odhodláním se učit nové věci. Pocházím z Kladna a mám vystudovanou střední průmyslovou školu se zaměřemím na informační technologie."}/>
           </div>
           <hr  className='mt-8'/>
@@ -46,11 +47,12 @@ function App() {
             </div>
           </div>
           <hr />
-           <h2 className='mt-18 mb-18 text-center rubik text-5xl'>Kontakty</h2>
-              <p className='text-2xl'>Email: <a href="mailto:petr@example.com" className="text-blue-400 underline">petr@example.com</a></p>
-              <p className='text-2xl'>GitHub: <a href="https://github.com/username" target="_blank" className="text-blue-400 underline">github.com/username</a></p>
-              <p className='text-2xl'>LinkedIn: <a href="https://linkedin.com/in/username" target="_blank" className="text-blue-400 underline">linkedin.com/in/username</a></p>
-
+              <div className="mt-18 mb-18">
+                <h2 className='text-center rubik text-5xl'>Kontakty</h2>
+                    <p className='text-2xl'>Email: <a href="mailto:petr@example.com" className="text-blue-400 underline">petr@example.com</a></p>
+                    <p className='text-2xl'>GitHub: <a href="https://github.com/username" target="_blank" className="text-blue-400 underline">github.com/username</a></p>
+                    <p className='text-2xl'>LinkedIn: <a href="https://linkedin.com/in/username" target="_blank" className="text-blue-400 underline">linkedin.com/in/username</a></p>
+              </div>
           </div>
     </>
   )
