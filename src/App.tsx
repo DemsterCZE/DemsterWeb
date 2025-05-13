@@ -16,10 +16,11 @@ import springsvg from "/images/spring.svg"
 import postgresqlsvg from "/images/postgresql.svg"
 import gitsvg from "/images/git.svg"
 import dockersvg from "/images/docker.svg"
-import postmansvg from "/images/postman.svg"
+import postmansvg from "/images/postman.svg" 
 import vscodesvg from "/images/vscode.svg"
 import intelijsvg from "/images/intelij.svg"
 import pycharmsvg from "/images/pycharm.svg"
+import godotsvg from "/images/godot.svg"
 
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
       <div id='content' className='ml-auto mr-auto container'>
           <TypeWriter title='DemsterSpace'/>
           <div className='lg:flex gap-10 items-start'>
-              <img src="src/assets/portrait.jpg" alt="portrait" className='w-85 rounded-xl'/>
+              <img src="/images/portrait.jpg" alt="portrait" className='w-85 rounded-xl'/>
                 
                 <SectionCard title={"Petr Zemánek"} 
                 text={"Mladý vývojář s odhodláním se učit nové věci. Pocházím z Kladna a mám vystudovanou střední průmyslovou školu se zaměřemím na informační technologie."}/>
@@ -55,9 +56,17 @@ function App() {
                 <ProjectCard ProjectName={"Hra PING | Maturitní projekt"} 
                 ProjectDescription={<>
                 Projekt se skládá ze tří částí (Webová aplikace, Desktopová aplikace a Backend) Jedná se o jednoduchou 2D hru vytvořenou v herním enginu Godot.
-                Projekt je dostupný na  <a className='text-blue-400 underline hover:text-blue-300' href="https://github.com/DemsterCZE/Maturita" target="_blank" rel="noopener noreferrer">GitHubu</a>
+                Projekt je dostupný 
+                na <a className='text-blue-400 underline hover:text-blue-300' href="https://github.com/DemsterCZE/Maturita" target="_blank" rel="noopener noreferrer">GitHubu</a>
                 </>} 
-                TechIcons={[pythonsvg,mysqlsvg,gitsvg,htmlsvg]}/>
+                TechIcons={[pythonsvg,mysqlsvg,gitsvg,htmlsvg,godotsvg]}/>
+                 <ProjectCard ProjectName={"Hra PING | Maturitní projekt"} 
+                ProjectDescription={<>
+                Projekt se skládá ze tří částí (Webová aplikace, Desktopová aplikace a Backend) Jedná se o jednoduchou 2D hru vytvořenou v herním enginu Godot.
+                Projekt je dostupný 
+                na <a className='text-blue-400 underline hover:text-blue-300' href="https://github.com/DemsterCZE/Maturita" target="_blank" rel="noopener noreferrer">GitHubu</a>
+                </>} 
+                TechIcons={[pythonsvg,mysqlsvg,gitsvg,htmlsvg,godotsvg]}/>
               </div>
           </div>
     </>
