@@ -15,6 +15,10 @@ body {
   width: 80%;
 }
 
+#projects {
+  width: 60%;
+}
+
 .grand{
   font-family: "Grandstander", cursive;
   font-optical-sizing: auto;

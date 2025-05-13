@@ -38,7 +38,7 @@ function TypeWriter({ title }: StringProps) {
 
   useEffect(() => {
     const cursorInterval = setInterval(() => {
-      setShowCursor((prev) => !prev);
+      setShowCursor((showCursor) => !showCursor);
     }, 500);
 
     return () => clearInterval(cursorInterval);

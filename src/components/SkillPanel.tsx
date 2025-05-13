@@ -27,7 +27,7 @@ function SkillCard({ title, images}: SkillCardProps) {
         ))}
       </div>
     </div>
-  );
+  )
 }
     
 export default SkillCard

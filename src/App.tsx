@@ -2,6 +2,7 @@ import './App.css'
 import TypeWriter from './components/TypeWriter'
 import SectionCard from './components/SectionCard'
 import SkillCard from './components/SkillPanel'
+import ProjectCard from './components/ProjectCard'
 import vitesvg from "/images/vite.svg"
 import reactsvg from "/images/react.svg"
 import htmlsvg from "/images/html.svg"
@@ -24,13 +25,15 @@ import pycharmsvg from "/images/pycharm.svg"
 function App() {
   return(
     <>
-      <div id='content' className='ml-auto mr-auto '>
+      <div id='content' className='ml-auto mr-auto container'>
           <TypeWriter title='DemsterSpace'/>
           <div className='lg:flex gap-10 items-start'>
               <img src="src/assets/portrait.jpg" alt="portrait" className='w-85 rounded-xl'/>
-              <SectionCard title={"Petr Zemánek"} text={"Mladý vývojář s odhodláním se učit nové věci. Pocházím z Kladna a mám vystudovanou střední průmyslovou školu se zaměřemím na informační technologie."}/>
+                
+                <SectionCard title={"Petr Zemánek"} 
+                text={"Mladý vývojář s odhodláním se učit nové věci. Pocházím z Kladna a mám vystudovanou střední průmyslovou školu se zaměřemím na informační technologie."}/>
           </div>
-          <hr  className='mt-8'/>
+          <hr  className='mt-10'/>
           <h2 className='mt-17 text-center rubik text-5xl'>Dovednosti</h2>
           <div className='lg:flex gap-28 mt-20'>
             <div className="flex-1">
@@ -47,11 +50,14 @@ function App() {
             </div>
           </div>
           <hr />
-              <div className="mt-18 mb-18">
-                <h2 className='text-center rubik text-5xl'>Kontakty</h2>
-                    <p className='text-2xl'>Email: <a href="mailto:petr@example.com" className="text-blue-400 underline">petr@example.com</a></p>
-                    <p className='text-2xl'>GitHub: <a href="https://github.com/username" target="_blank" className="text-blue-400 underline">github.com/username</a></p>
-                    <p className='text-2xl'>LinkedIn: <a href="https://linkedin.com/in/username" target="_blank" className="text-blue-400 underline">linkedin.com/in/username</a></p>
+              <div id='projects' className="ml-auto mr-auto mt-18 mb-18">
+                <h2 className='text-center rubik text-5xl mb-20'>Projekty</h2>
+                <ProjectCard ProjectName={"Hra PING | Maturitní projekt"} 
+                ProjectDescription={<>
+                Projekt se skládá ze tří částí (Webová aplikace, Desktopová aplikace a Backend) Jedná se o jednoduchou 2D hru vytvořenou v herním enginu Godot.
+                Projekt je dostupný na  <a className='text-blue-400 underline hover:text-blue-300' href="https://github.com/DemsterCZE/Maturita" target="_blank" rel="noopener noreferrer">GitHubu</a>
+                </>} 
+                TechIcons={[pythonsvg,mysqlsvg,gitsvg,htmlsvg]}/>
               </div>
           </div>
     </>
