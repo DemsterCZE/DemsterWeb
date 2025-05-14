@@ -15,6 +15,7 @@ function SkillCard({ title, images}: SkillCardProps) {
       <div className="image-container mt-23">
         {images.map((src, index) => (
           <img
+            loading="lazy"
             key={index}
             src={src}
             alt={`${title}_icon_${index + 1}`}

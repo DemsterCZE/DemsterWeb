@@ -52,21 +52,18 @@ function App() {
           </div>
           <hr />
               <div id='projects' className="ml-auto mr-auto mt-18 mb-18">
-                <h2 className='text-center rubik text-5xl mb-20'>Projekty</h2>
-                <ProjectCard ProjectName={"Hra PING | Maturitní projekt"} 
-                ProjectDescription={<>
-                Projekt se skládá ze tří částí (Webová aplikace, Desktopová aplikace a Backend) Jedná se o jednoduchou 2D hru vytvořenou v herním enginu Godot.
-                Projekt je dostupný 
-                na <a className='text-blue-400 underline hover:text-blue-300' href="https://github.com/DemsterCZE/Maturita" target="_blank" rel="noopener noreferrer">GitHubu</a>
-                </>} 
-                TechIcons={[pythonsvg,mysqlsvg,gitsvg,htmlsvg,godotsvg]}/>
-                 <ProjectCard ProjectName={"Hra PING | Maturitní projekt"} 
-                ProjectDescription={<>
-                Projekt se skládá ze tří částí (Webová aplikace, Desktopová aplikace a Backend) Jedná se o jednoduchou 2D hru vytvořenou v herním enginu Godot.
-                Projekt je dostupný 
-                na <a className='text-blue-400 underline hover:text-blue-300' href="https://github.com/DemsterCZE/Maturita" target="_blank" rel="noopener noreferrer">GitHubu</a>
-                </>} 
-                TechIcons={[pythonsvg,mysqlsvg,gitsvg,htmlsvg,godotsvg]}/>
+                  <h2 className='text-center rubik text-5xl mb-20'>Projekty</h2>
+                  <ProjectCard ProjectName={"Hra PING | Maturitní projekt"} 
+                  ProjectDescription={<>
+                  Projekt se skládá ze tří částí (Webová aplikace, Desktopová aplikace a Backend) Jedná se o jednoduchou 2D hru vytvořenou v herním enginu Godot.
+                  Projekt je dostupný 
+                  na <a className='text-blue-400 underline hover:text-blue-300' href="https://github.com/DemsterCZE/Maturita" target="_blank" rel="noopener noreferrer">GitHubu</a>
+                  </>} 
+                  TechIcons={[pythonsvg,mysqlsvg,gitsvg,htmlsvg,godotsvg]}/>
+              </div>
+              <hr />
+              <div id='contact' className='ml-auto mr-auto mt-18 mb-18'>
+                    <h2 className='text-center rubik text-5xl mb-20'>Kontakt</h2>
               </div>
           </div>
     </>
