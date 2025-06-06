@@ -19,7 +19,7 @@ function SkillCard({ title, images}: SkillCardProps) {
             key={index}
             src={src}
             alt={`${title}_icon_${index + 1}`}
-            className={`floating-image  transition ease-linear hover:scale-107`}
+            className={`floating-image  transition ease-linear hover:scale-107 select-none`}
             style={{
               animationDelay: `${index * interval}s`,
               animationDuration: `${totalDuration}s`,

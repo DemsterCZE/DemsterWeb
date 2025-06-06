@@ -13,7 +13,7 @@ function ProjectCard({ProjectName,ProjectDescription,TechIcons}:ProjectProps){
             <div className="flex gap-3 mt-4">
                 {TechIcons?.map((src,index)=> 
                 <img 
-                className="w-9" src={src} alt={src+"_"+index.toString()} 
+                className="w-9 select-none" src={src} alt={ProjectName+"_"+index.toString()} 
                 key={src}
                 loading="lazy"
                 />

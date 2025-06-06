@@ -45,10 +45,11 @@ function TypeWriter({ title }: StringProps) {
   }, []);
 
   return (
-    <h1 className='mt-30 mb-30 text-center text-[1rem] sm:text-[2rem] md:text-[3rem] lg:text-[4rem] xl:text-[4rem] rubik'>
+    <h1 className='mt-30 mb-30 text-center text-[1rem] sm:text-[2rem] md:text-[3rem] lg:text-[4rem] xl:text-[4rem] rubik text-shadow-md text-shadow-pink-700'>
       {text}
-      <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
+      <span className="text-shadow-none" style={{ opacity: showCursor ? 1 : 0 }}>|</span>
     </h1>
+    
   );
 }
 
