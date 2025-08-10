@@ -28,10 +28,10 @@ function App() {
     <>
       <div className='antialiased selection:bg-purple-950'>
         <div id='content' className='ml-auto mr-auto container'>
-          <div className='h-screen flex flex-col items-center justify-center'>
+          <div className='h-screen flex flex-col items-center justify-center sticky -top-100 -z-1'>
             <TypeWriter title='DemsterSpace' />
           </div>
-          <main>
+          <main className='bg-black'>
             <div className='relative lg:flex gap-10 items-start z-50'>
               <img src="/images/images.png" alt="portrait" className='w-85 rounded-xl' />
 
@@ -42,10 +42,10 @@ function App() {
             <h2 className='mt-17 text-center rubik text-5xl text-shadow-md text-shadow-purple-950'>Dovednosti</h2>
             <div className='lg:flex gap-28 mt-18'>
               <div className="flex-1">
-                <SkillCard title='Frontend 👨‍💻' images={[htmlsvg, reactsvg, tailwindsvg, typescriptsvg, vitesvg]} />
+                <SkillCard title='Frontend 💻' images={[htmlsvg, reactsvg, tailwindsvg, typescriptsvg, vitesvg]} />
               </div>
               <div className="flex-1">
-                <SkillCard title='Backend 💻' images={[javasvg, pythonsvg, mysqlsvg, springsvg, postgresqlsvg]} />
+                <SkillCard title='Backend 👨‍💻' images={[javasvg, pythonsvg, mysqlsvg, springsvg, postgresqlsvg]} />
               </div>
               <div className="flex-1">
                 <SkillCard title='DevOps ⚙️' images={[jirasvg, gitsvg, dockersvg]} />
