@@ -21,6 +21,7 @@ import vscodesvg from "/images/vscode.svg"
 import intelijsvg from "/images/intelij.svg"
 import pycharmsvg from "/images/pycharm.svg"
 import godotsvg from "/images/godot.svg"
+import ScrollPopUp from './components/scrollpopup'
 
 
 function App() {
@@ -32,14 +33,17 @@ function App() {
             <TypeWriter title='DemsterSpace' />
           </div>
           <main className='bg-black'>
+            <ScrollPopUp>
             <div className='relative lg:flex gap-10 items-start z-50'>
               <img src="/images/images.png" alt="portrait" className='w-85 rounded-xl' />
 
               <SectionCard title={"Petr Zemánek"}
                 text={"Mladý vývojář s odhodláním se učit nové věci. Pocházím z Kladna a mám vystudovanou střední průmyslovou školu se zaměřemím na informační technologie."} />
             </div>
+            </ScrollPopUp>
             <hr className='mt-10' />
             <h2 className='mt-17 text-center rubik text-5xl text-shadow-md text-shadow-purple-950'>Dovednosti</h2>
+            <ScrollPopUp>
             <div className='lg:flex gap-28 mt-18'>
               <div className="flex-1">
                 <SkillCard title='Frontend 💻' images={[htmlsvg, reactsvg, tailwindsvg, typescriptsvg, vitesvg]} />
@@ -54,9 +58,11 @@ function App() {
                 <SkillCard title='Tools 🛠️' images={[vscodesvg, postmansvg, intelijsvg, pycharmsvg]} />
               </div>
             </div>
+            </ScrollPopUp>
             <hr />
             <div id='projects' className="ml-auto mr-auto mt-17 mb-18">
               <h2 className='text-center rubik text-5xl mb-20 text-shadow-md text-shadow-purple-950'>Projekty</h2>
+              <ScrollPopUp>
               <ProjectCard ProjectName={"Hra PING | Maturitní projekt"}
                 ProjectDescription={<>
                   Projekt se skládá ze tří částí (Webová aplikace, Desktopová aplikace a Backend) Jedná se o jednoduchou 2D hru vytvořenou v herním enginu Godot.
@@ -64,6 +70,7 @@ function App() {
                   na <a className='text-blue-400 underline hover:text-blue-300' href="https://github.com/DemsterCZE/Maturita" target="_blank" rel="noopener noreferrer">GitHubu</a>
                 </>}
                 TechIcons={[pythonsvg, mysqlsvg, gitsvg, htmlsvg, godotsvg]} />
+                </ScrollPopUp>
             </div>
             <hr />
             <div id='contact' className='ml-auto mr-auto mt-17 mb-18'>
