@@ -22,75 +22,77 @@ import intelijsvg from "/images/intelij.svg"
 import pycharmsvg from "/images/pycharm.svg"
 import godotsvg from "/images/godot.svg"
 import ScrollPopUp from './components/scrollpopup'
+import { Button } from './components/ui/button'
+import { Analytics } from '@vercel/analytics/react';
 
 
 function App() {
   return (
-    <>
+      <>
       <div className='antialiased selection:bg-purple-950'>
         <div id='content' className='ml-auto mr-auto container'>
-          <div className='h-screen flex flex-col items-center justify-center sticky -top-100 -z-1'>
+          <div className='h-screen flex flex-col items-center justify-center'>
             <TypeWriter title='DemsterSpace' />
+            <a href="#projects"><Button size={"lg"}>Projekty</Button></a>
           </div>
           <main className='bg-black'>
             <ScrollPopUp>
-            <div className='relative lg:flex gap-10 items-start z-50'>
-              <img src="/images/images.png" alt="portrait" className='w-85 rounded-xl' />
-
-              <SectionCard title={"Petr Zemánek"}
-                text={"Mladý vývojář s odhodláním se učit nové věci. Pocházím z Kladna a mám vystudovanou střední průmyslovou školu se zaměřemím na informační technologie."} />
-            </div>
+              <div className='relative lg:flex gap-10 items-start z-50'>
+                <img src="/images/images.png" alt="portrait" className='w-85 rounded-xl' />
+                <SectionCard title={"Petr Zemánek"}
+                  text={"Mladý vývojář s odhodláním se učit nové věci. Pocházím z Kladna a mám vystudovanou střední průmyslovou školu se zaměřemím na informační technologie."} />
+              </div>
             </ScrollPopUp>
             <hr className='mt-10' />
-            <h2 className='mt-17 text-center rubik text-5xl text-shadow-md text-shadow-purple-950'>Dovednosti</h2>
+            <h2 className='mt-17 text-center rubik text-[1rem] sm:text-[2rem] md:text-[3rem] lg:text-[3rem] text-shadow-md text-shadow-purple-950'>Dovednosti</h2>
             <ScrollPopUp>
-            <div className='lg:flex gap-28 mt-18'>
-              <div className="flex-1">
-                <SkillCard title='Frontend 💻' images={[htmlsvg, reactsvg, tailwindsvg, typescriptsvg, vitesvg]} />
+              <div className='lg:flex gap-28 mt-18'>
+                <div className="flex-1">
+                  <SkillCard title='Frontend 💻' images={[htmlsvg, reactsvg, tailwindsvg, typescriptsvg, vitesvg]} />
+                </div>
+                <div className="flex-1">
+                  <SkillCard title='Backend 👨‍💻' images={[javasvg, pythonsvg, mysqlsvg, springsvg, postgresqlsvg]} />
+                </div>
+                <div className="flex-1">
+                  <SkillCard title='DevOps ⚙️' images={[jirasvg, gitsvg, dockersvg]} />
+                </div>
+                <div className="flex-1">
+                  <SkillCard title='Tools 🛠️' images={[vscodesvg, postmansvg, intelijsvg, pycharmsvg]} />
+                </div>
               </div>
-              <div className="flex-1">
-                <SkillCard title='Backend 👨‍💻' images={[javasvg, pythonsvg, mysqlsvg, springsvg, postgresqlsvg]} />
-              </div>
-              <div className="flex-1">
-                <SkillCard title='DevOps ⚙️' images={[jirasvg, gitsvg, dockersvg]} />
-              </div>
-              <div className="flex-1">
-                <SkillCard title='Tools 🛠️' images={[vscodesvg, postmansvg, intelijsvg, pycharmsvg]} />
-              </div>
-            </div>
             </ScrollPopUp>
             <hr />
             <div id='projects' className="ml-auto mr-auto mt-17 mb-18">
-              <h2 className='text-center rubik text-5xl mb-20 text-shadow-md text-shadow-purple-950'>Projekty</h2>
+              <h2 className='text-center rubik text-[1rem] sm:text-[2rem] md:text-[3rem] lg:text-[3rem] mb-20 text-shadow-md text-shadow-purple-950'>Projekty</h2>
               <ScrollPopUp>
-              <ProjectCard ProjectName={"Hra PING | Maturitní projekt"}
-                ProjectDescription={<>
-                  Projekt se skládá ze tří částí (Webová aplikace, Desktopová aplikace a Backend) Jedná se o jednoduchou 2D hru vytvořenou v herním enginu Godot.
-                  Projekt je dostupný
-                  na <a className='text-blue-400 underline hover:text-blue-300' href="https://github.com/DemsterCZE/Maturita" target="_blank" rel="noopener noreferrer">GitHubu</a>
-                </>}
-                TechIcons={[pythonsvg, mysqlsvg, gitsvg, htmlsvg, godotsvg]} />
-                </ScrollPopUp>
+                <ProjectCard ProjectName={"Hra PING | Maturitní projekt"}
+                  ProjectDescription={<>
+                    Projekt se skládá ze tří částí (Webová aplikace, Desktopová aplikace a Backend) Jedná se o jednoduchou 2D hru vytvořenou v herním enginu Godot.
+                    Projekt je dostupný
+                    na <a className='text-blue-400 underline hover:text-blue-300' href="https://github.com/DemsterCZE/Maturita" target="_blank" rel="noopener noreferrer">GitHubu</a>
+                  </>}
+                  TechIcons={[pythonsvg, mysqlsvg, gitsvg, htmlsvg, godotsvg]} />
+              </ScrollPopUp>
             </div>
             <hr />
             <div id='contact' className='ml-auto mr-auto mt-17 mb-18'>
-              <h2 className='text-center rubik text-5xl mb-2 text-shadow-md text-shadow-purple-950'>Kontakt</h2>
-              
-              <div className='w-1/2 flex ml-auto mr-auto'>
-                <div className='flex-1'>
-                  <a className='' href="https://www.linkedin.com/in/petr-zem%C3%A1nek-374a76250/" id='linkedin'><img className='w-9' src="images/linkedin.svg" alt="linkedin_icon"/></a>
-                  <label htmlFor="linkedin">Linkedin</label>
+              <h2 className='text-center rubik text-[1rem] sm:text-[2rem] md:text-[3rem] lg:text-[3rem] mb-2 text-shadow-md text-shadow-purple-950'>Kontakt</h2>
+              <ScrollPopUp>
+                <div className='w-1/2 flex ml-auto mr-auto'>
+                  <div className='flex-1'>
+                    <a className='' href="https://www.linkedin.com/in/petr-zem%C3%A1nek-374a76250/" id='linkedin'><img className='w-9' src="images/linkedin.svg" alt="linkedin_icon" /></a>
+                    <label htmlFor="linkedin">Linkedin</label>
+                  </div>
+                  <div className='flex-1'>
+                  </div>
                 </div>
-                <div className='flex-1'>
-
-                  
-                </div>
-              </div>
+              </ScrollPopUp>
             </div>
           </main>
         </div>
       </div>
-    </>
+      <Analytics />
+      </>
   )
 }
 
